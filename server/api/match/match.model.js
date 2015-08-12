@@ -6,7 +6,8 @@ var mongoose = require('mongoose'),
 var MatchSchema = new Schema({
 	id: Number,
 	data: String,
-	region: String
+	region: String,
+	type: String
 });
 
 module.exports = mongoose.model('Match', MatchSchema);
