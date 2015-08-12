@@ -33,13 +33,11 @@ var createMatches = function () {
 	async.eachSeries(matches, function (match, callback) {
 		new Match(match).save(callback); //.save(callback);
 	});
-	console.log("matches created");
 };
 
 Match.count({}, function (err, count) {
 	console.log(count, matches.length);
 	if (count !== matches.length) {
-		console.log(Match.modelName);
 		mongoose.connection.db.dropCollection(Match.modelName, createMatches);
 	}
 });
