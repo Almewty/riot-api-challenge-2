@@ -7,7 +7,8 @@ var MatchSchema = new Schema({
 	id: Number,
 	data: String,
 	region: String,
-	type: String
+	type: String,
+	patch: String
 });
 
 module.exports = mongoose.model('Match', MatchSchema);

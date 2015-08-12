@@ -6,32 +6,40 @@
 'use strict';
 
 var Match = require('../api/match/match.model');
+var mongoose = require('mongoose');
+var matches = require('./data.json');
+var _ = require('underscore');
+var async = require('async');
 
-//Match.find({}, function (err, docs) {
-//	
-//}).remove(function () {
-//	Match.create({
-//});
+Array.range = function (n) {
+	// Array.range(5) --> [0,1,2,3,4]
+	return Array.apply(null, Array(n)).map(function (x, i) {
+		return i
+	})
+};
 
+Object.defineProperty(Array.prototype, 'chunk', {
+	value: function (n) {
+		// ACTUAL CODE FOR CHUNKING ARRAY:
+		return Array.range(Math.ceil(this.length / n)).map(function (x, i) {
+			return this.slice(i * n, i * n + n);
+		}.bind(this));
+	}
+});
 
-//Thing.find({}).remove(function () {
-//	Thing.create({
-//		name: 'Development Tools',
-//		info: 'Integration with popular tools such as Bower, Grunt, Karma, Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, Stylus, Sass, CoffeeScript, and Less.'
-//	}, {
-//		name: 'Server and Client integration',
-//		info: 'Built with a powerful and fun stack: MongoDB, Express, AngularJS, and Node.'
-//	}, {
-//		name: 'Smart Build System',
-//		info: 'Build system ignores `spec` files, allowing you to keep tests alongside code. Automatic injection of scripts and styles into your index.html'
-//	}, {
-//		name: 'Modular Structure',
-//		info: 'Best practice client and server structures allow for more code reusability and maximum scalability'
-//	}, {
-//		name: 'Optimized Build',
-//		info: 'Build process packs up your templates as a single JavaScript payload, minifies your scripts/css/images, and rewrites asset names for caching.'
-//	}, {
-//		name: 'Deployment Ready',
-//		info: 'Easily deploy your app to Heroku or Openshift with the heroku and openshift subgenerators'
-//	});
-//});
+var createMatches = function () {
+	console.log("creating matches");
+	var i = 0;
+	async.eachSeries(matches, function (match, callback) {
+		new Match(match).save(callback); //.save(callback);
+	});
+	console.log("matches created");
+};
+
+Match.count({}, function (err, count) {
+	console.log(count, matches.length);
+	if (count !== matches.length) {
+		console.log(Match.modelName);
+		mongoose.connection.db.dropCollection(Match.modelName, createMatches);
+	}
+});

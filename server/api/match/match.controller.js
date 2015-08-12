@@ -11,7 +11,12 @@ var Match = require('./match.model');
 
 // Get list of things
 exports.index = function (req, res) {
-	Match.find(function (err, things) {
+	var offset = req.query.offset || 0;
+	var size = /*req.query.size || */ 500;
+	var query = Match.find({});
+	query.limit(size);
+	query.skip(offset);
+	query.exec(function (err, things) {
 		if (err) {
 			return handleError(res, err);
 		}
