@@ -6,7 +6,7 @@ div(ng-include='"components/navbar/navbar.html"')
       h1.page-header Champions:
         ul
           li.list-group-item(ng-repeat='name in names')
-            img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/" + {{name}} + ".png"
+            img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/{{name}}.png")
             {{name}}
 footer.footer
   .container
