@@ -7,9 +7,9 @@ angular.module('riotApiChallenge2App', [
   'ui.router',
   'ui.bootstrap'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider
-      .otherwise('/');
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        $urlRouterProvider
+            .otherwise('/');
 
-    $locationProvider.html5Mode(true);
-  });
+        $locationProvider.html5Mode(true);
+    });
