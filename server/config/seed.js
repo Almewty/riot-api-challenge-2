@@ -36,7 +36,6 @@ var createMatches = function () {
 };
 
 Match.count({}, function (err, count) {
-	console.log(count, matches.length);
 	if (count !== matches.length) {
 		mongoose.connection.db.dropCollection(Match.modelName, createMatches);
 	}
