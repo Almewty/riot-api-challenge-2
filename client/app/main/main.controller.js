@@ -23,16 +23,20 @@ angular.module('riotApiChallenge2App')
         };
     })
     .controller('ChampionlistCtrl', function ($scope, championList) {
-        $scope.names = [];
-        championList.success(function (data) {
-            var championData = data.data;
-            var temp = [];
-            for (var i in championData) {
-                if (championData.hasOwnProperty(i)) {
-                    temp.push(championData[i].name);
-                }
-            }
-            console.log($scope.names);
-            $scope.names = temp;
-        });
+        $scope.champions = [];
+
+        if ($scope.champions.length == 0) {
+            championList.loadChampions(function () {
+                $scope.champions = championList.getChampions();
+            });
+        }
+    })
+    .controller('ItemlistCtrl', function ($scope, itemList) {
+        $scope.items = [];
+
+        if ($scope.items.length == 0) {
+            itemList.loadItems(function () {
+                $scope.items = itemList.getItems();
+            });
+        }
     });
