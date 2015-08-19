@@ -27,6 +27,7 @@ var loadDataFromRiot = function loadDataFromRiot(match, callback) {
 		}
 		async.each(data.participants, function (part, cb) {
 			var p = new Participant();
+			p.match = match._id;
 			for (var pKey in part) {
 				if (participantProps.indexOf(pKey) >= 0) {
 					p[pKey] = part[pKey];
@@ -69,7 +70,7 @@ var loadMatchesFromRiot = function loadMatchesFromRiot(limit, callback) {
 
 var startCron = function startCron() {
 	loadMatchesFromRiot(100, function (err) {
-		console.error(err);
+		if (err) console.error(err);
 		setTimeout(startCron, 5000);
 	});
 };
