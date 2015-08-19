@@ -41,15 +41,27 @@ exports.byItem = function (req, res) {
 			}]
 
 		})
-		.populate('match')
+		.populate({
+			path: 'match',
+			select: '-_id -participants -id -loaded -__v'
+		})
+		.select('-_id -spell1Id -spell2Id')
 		.sort({
 			_id: -1
 		}).exec(function (err, participants) {
 			participants = _.filter(participants, function (p) {
 				return !patch || p.match.patch === patch;
 			});
+			var result = {
+				won: _.filter(participants, function (p) {
+					return p.stats.winner;
+				}),
+				lost: _.filter(participants, function (p) {
+					return !p.stats.winner;
+				})
+			};
 			if (err) return handleError(res, err);
-			return res.status(200).json(participants);
+			return res.status(200).json(result);
 		});
 };
 
