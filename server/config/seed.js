@@ -61,7 +61,7 @@ var createMatches = function (patch, queue, region, matches) {
 };
 
 Match.count({}, function (err, count) {
-	if (count !== matchCount) {
+	if (count > matchCount) {
 		Match.remove({}, createAllMatches);
 	}
 });
