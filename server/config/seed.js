@@ -13,22 +13,6 @@ var async = require('async');
 
 var matchCount = 400000;
 
-//Array.range = function(n) {
-//	// Array.range(5) --> [0,1,2,3,4]
-//	return Array.apply(null, Array(n)).map(function (x, i) {
-//		return i
-//	})
-//};
-//
-//Object.defineProperty(Array.prototype, 'chunk', {
-//	value: function (n) {
-//		// ACTUAL CODE FOR CHUNKING ARRAY:
-//		return Array.range(Math.ceil(this.length / n)).map(function (x, i) {
-//			return this.slice(i * n, i * n + n);
-//		}.bind(this));
-//	}
-//});
-
 var createAllMatches = function createAllMatches() {
 	for (var patch in data) {
 		if (data.hasOwnProperty(patch)) {
@@ -61,7 +45,7 @@ var createMatches = function (patch, queue, region, matches) {
 };
 
 Match.count({}, function (err, count) {
-	if (count > matchCount) {
+	if (count < matchCount) {
 		Match.remove({}, createAllMatches);
 	}
 });
