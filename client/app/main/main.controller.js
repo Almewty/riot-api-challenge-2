@@ -36,7 +36,7 @@ angular.module('riotApiChallenge2App')
 
         if ($scope.items.length == 0) {
             itemList.loadItems(function () {
-                $scope.items = itemList.getItems();
+                $scope.items = itemList.getAPItems();
             });
         }
     });
