@@ -1,0 +1,1111 @@
+{
+    "5.11.1": {
+        "1026": {
+            "id": 1026,
+            "name": "Blasting Wand",
+            "description": "<stats>+40 Ability Power</stats>",
+            "sanitizedDescription": "+40 Ability Power",
+            "plaintext": "Moderately increases Ability Power",
+            "into": ["3001", "3135", "3027", "3029", "3089", "3116", "3124", "3090", "3003", "3007", "3286"],
+            "tags": ["SpellDamage"],
+            "image": {
+                "full": "1026.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 240,
+                "y": 0,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 40.0
+            },
+            "gold": {
+                "base": 860,
+                "total": 860,
+                "sell": 602,
+                "purchasable": true
+            }
+        },
+        "1058": {
+            "id": 1058,
+            "name": "Needlessly Large Rod",
+            "description": "<stats>+80 Ability Power</stats>",
+            "sanitizedDescription": "+80 Ability Power",
+            "colloq": "nlr",
+            "plaintext": "Greatly increases Ability Power",
+            "into": ["3089", "3157", "3285"],
+            "tags": ["SpellDamage"],
+            "maps": {
+                "10": false
+            },
+            "image": {
+                "full": "1058.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 192,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 1600,
+                "total": 1600,
+                "sell": 1120,
+                "purchasable": true
+            }
+        },
+        "3089": {
+            "id": 3089,
+            "name": "Rabadon's Deathcap",
+            "description": "<stats>+120 Ability Power  </stats><br><br><unique>UNIQUE Passive:</unique> Increases Ability Power by 30%.",
+            "sanitizedDescription": "+120 Ability Power UNIQUE Passive: Increases Ability Power by 30%.",
+            "colloq": "dc;banksys;hat",
+            "plaintext": "Massively increases Ability Power",
+            "depth": 2,
+            "from": ["1026", "1058"],
+            "tags": ["SpellDamage"],
+            "maps": {
+                "10": false
+            },
+            "image": {
+                "full": "3089.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 384,
+                "y": 432,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 120.0
+            },
+            "gold": {
+                "base": 840,
+                "total": 3300,
+                "sell": 2310,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect1Amount": "30"
+            }
+        },
+        "3157": {
+            "id": 3157,
+            "name": "Zhonya's Hourglass",
+            "description": "<stats>+120 Ability Power<br>+50 Armor  </stats><br><br><active>UNIQUE Active - Stasis:</active> Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move,                                   attack, cast spells, or use items during this time (90 second cooldown).",
+            "sanitizedDescription": "+120 Ability Power +50 Armor UNIQUE Active - Stasis: Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (90 second cooldown).",
+            "colloq": "zhg;zonyas",
+            "plaintext": "Activate to become invincible but unable to take actions",
+            "depth": 3,
+            "from": ["3191", "1058"],
+            "tags": ["Active", "Armor", "SpellDamage"],
+            "maps": {
+                "10": false
+            },
+            "image": {
+                "full": "3157.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 48,
+                "y": 192,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatArmorMod": 50.0,
+                "FlatMagicDamageMod": 120.0
+            },
+            "gold": {
+                "base": 500,
+                "total": 3300,
+                "sell": 2310,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "90",
+                "Effect2Amount": "2.5",
+                "Effect1Amount": "0"
+            }
+        },
+        "3285": {
+            "id": 3285,
+            "name": "Luden's Echo",
+            "description": "<stats>+100 Ability Power<br>+10% Movement Speed</stats><br><br><unique>UNIQUE Passive:</unique> Gain charges upon moving or casting. At 100 charges, the next spell hit expends all charges                             to deal 100 (+10% AP) bonus magic damage to up to 4 targets on hit.",
+            "sanitizedDescription": "+100 Ability Power +10% Movement Speed UNIQUE Passive: Gain charges upon moving or casting. At 100 charges, the next spell hit expends all charges to deal 100 (+10% AP) bonus magic damage to up to 4 targets on hit.",
+            "plaintext": "Increases Ability Power and Movement Speed",
+            "depth": 3,
+            "from": ["1058", "3113"],
+            "tags": ["NonbootsMovement", "OnHit", "SpellDamage"],
+            "maps": {
+                "10": false
+            },
+            "image": {
+                "full": "3285.png",
+                "sprite": "item2.png",
+                "group": "item",
+                "x": 288,
+                "y": 288,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 100.0,
+                "PercentMovementSpeedMod": 0.1
+            },
+            "gold": {
+                "base": 900,
+                "total": 3000,
+                "sell": 2100,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "4",
+                "Effect6Amount": "10",
+                "Effect5Amount": "35",
+                "Effect4Amount": "0.1",
+                "Effect2Amount": "100",
+                "Effect1Amount": "100"
+            }
+        },
+        "3116": {
+            "id": 3116,
+            "name": "Rylai's Crystal Scepter",
+            "description": "<stats>+400 Health<br>+100 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> Damaging spells and abilities apply a Movement Speed reduction to enemies based on the spell type:<br><br><active>Single Target:</active> 40% reduction for 1.5 seconds. <br><active>Area of Effect:</active> 40% reduction for 1 seconds<br><active>Damage over Time or Multi-hit:</active> 20% reduction for 1 seconds.<br><active>Summoned Minions:</active> 20% reduction for 1 seconds.<br><br><i>(If a spell fits in more than one category, it uses the weakest slow value.)</i>",
+            "sanitizedDescription": "+400 Health +100 Ability Power UNIQUE Passive: Damaging spells and abilities apply a Movement Speed reduction to enemies based on the spell type: Single Target: 40% reduction for 1.5 seconds. Area of Effect: 40% reduction for 1 seconds Damage over Time or Multi-hit: 20% reduction for 1 seconds. Summoned Minions: 20% reduction for 1 seconds. (If a spell fits in more than one category, it uses the weakest slow value.)",
+            "plaintext": "Abilities slow enemies",
+            "depth": 3,
+            "from": ["1058", "1052", "1011"],
+            "tags": ["Health", "Slow", "SpellDamage"],
+            "image": {
+                "full": "3116.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 432,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatHPPoolMod": 400.0,
+                "FlatMagicDamageMod": 100.0
+            },
+            "gold": {
+                "base": 315,
+                "total": 3000,
+                "sell": 2100,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "1.5",
+                "Effect6Amount": "-0.4",
+                "Effect5Amount": "1",
+                "Effect4Amount": "1",
+                "Effect2Amount": "-0.2",
+                "Effect1Amount": "-0.4"
+            }
+        },
+        "3003": {
+            "id": 3003,
+            "name": "Archangel's Staff",
+            "description": "<stats>+80 Ability Power<br><mana>+250 Mana<br>+50% Base Mana Regen </mana></stats><br><br><mana><unique>UNIQUE Passive - Insight:</unique> Grants Ability Power equal to 3% of maximum Mana.<br><unique>UNIQUE Passive - Mana Charge:</unique> Grants +8 maximum Mana (max +750 Mana) for each spell cast and Mana expenditure (occurs up to 2 times every 8 seconds). Transforms into Seraph's Embrace at +750 Mana.</mana><br><br><i>(Unique Passives with the same name don't stack.)</i>",
+            "sanitizedDescription": "+80 Ability Power +250 Mana +50% Base Mana Regen UNIQUE Passive - Insight: Grants Ability Power equal to 3% of maximum Mana. UNIQUE Passive - Mana Charge: Grants +8 maximum Mana (max +750 Mana) for each spell cast and Mana expenditure (occurs up to 2 times every 8 seconds). Transforms into Seraph's Embrace at +750 Mana. (Unique Passives with the same name don't stack.)",
+            "colloq": "aa",
+            "plaintext": "Increases Ability Power based on maximum Mana",
+            "depth": 3,
+            "from": ["3070", "1058"],
+            "into": ["3040"],
+            "tags": ["Mana", "ManaRegen", "SpellDamage"],
+            "image": {
+                "full": "3003.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 0,
+                "y": 240,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMPPoolMod": 250.0,
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 1030,
+                "total": 3000,
+                "sell": 2100,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "750",
+                "Effect5Amount": "8",
+                "Effect4Amount": "2",
+                "Effect2Amount": "8",
+                "Effect1Amount": "0.03"
+            }
+        },
+        "3048": {
+            "id": 3048,
+            "name": "Seraph's Embrace",
+            "description": "<stats>+80 Ability Power<br><mana>+1000 Mana<br>+50% Base Mana Regen </mana></stats><br><br><mana><unique>UNIQUE Passive - Insight:</unique> Grants Ability Power equal to 3% of maximum Mana.</mana><br><active>UNIQUE Active - Mana Shield:</active> Consumes 20% of current Mana to grant a shield for 3 seconds that absorbs damage equal to 150 plus the amount of Mana consumed (120 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)</i>",
+            "sanitizedDescription": "+80 Ability Power +1000 Mana +50% Base Mana Regen UNIQUE Passive - Insight: Grants Ability Power equal to 3% of maximum Mana. UNIQUE Active - Mana Shield: Consumes 20% of current Mana to grant a shield for 3 seconds that absorbs damage equal to 150 plus the amount of Mana consumed (120 second cooldown). (Unique Passives with the same name don't stack.)",
+            "depth": 4,
+            "from": ["3007"],
+            "specialRecipe": 3007,
+            "inStore": false,
+            "tags": ["Active"],
+            "maps": {
+                "1": false,
+                "10": false,
+                "12": false
+            },
+            "image": {
+                "full": "3048.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 240,
+                "y": 336,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMPPoolMod": 1000.0,
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 2700,
+                "total": 2700,
+                "sell": 3990,
+                "purchasable": false
+            }
+        },
+        "3027": {
+            "id": 3027,
+            "name": "Rod of Ages",
+            "description": "<stats>+450 Health<br><mana>+450 Mana</mana><br>+60 Ability Power</stats><br><br><passive>Passive:</passive> Grants +20 Health, +20 Mana, and +2 Ability Power per stack (max +200 Health, +200 Mana, and +20 Ability Power). Grants 1 stack per minute (max 10 stacks).<br><unique>UNIQUE Passive - Valor's Reward:</unique> Upon leveling up, restores 150 Health and 200 Mana over 8 seconds.<br><br><i>(Unique Passives with the same name don't stack.)</i>",
+            "sanitizedDescription": "+450 Health +450 Mana +60 Ability Power Passive: Grants +20 Health, +20 Mana, and +2 Ability Power per stack (max +200 Health, +200 Mana, and +20 Ability Power). Grants 1 stack per minute (max 10 stacks). UNIQUE Passive - Valor's Reward: Upon leveling up, restores 150 Health and 200 Mana over 8 seconds. (Unique Passives with the same name don't stack.)",
+            "colloq": "roa",
+            "plaintext": "Greatly increases Health, Mana, and Ability Power",
+            "depth": 3,
+            "from": ["3010", "1026"],
+            "tags": ["Health", "HealthRegen", "Mana", "ManaRegen", "SpellDamage"],
+            "image": {
+                "full": "3027.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 144,
+                "y": 288,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatHPPoolMod": 450.0,
+                "FlatMPPoolMod": 450.0,
+                "FlatMagicDamageMod": 60.0
+            },
+            "gold": {
+                "base": 740,
+                "total": 2800,
+                "sell": 1960,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect8Amount": "8",
+                "Effect3Amount": "2",
+                "Effect7Amount": "200",
+                "Effect6Amount": "150",
+                "Effect5Amount": "10",
+                "Effect4Amount": "1",
+                "Effect2Amount": "20",
+                "Effect1Amount": "20"
+            }
+        },
+        "3136": {
+            "id": 3136,
+            "name": "Haunting Guise",
+            "description": "<stats>+25 Ability Power<br>+200 Health</stats><br><br><unique>UNIQUE Passive - Eyes of Pain:</unique> +15 Magic Penetration<br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)</i><br><br><i>(Unique Passives with the same name do not stack.)</i>",
+            "sanitizedDescription": "+25 Ability Power +200 Health UNIQUE Passive - Eyes of Pain: +15 Magic Penetration (Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.) (Unique Passives with the same name do not stack.)",
+            "colloq": "mask",
+            "plaintext": "Increases magic damage",
+            "stacks": 0,
+            "depth": 2,
+            "from": ["1028", "1052"],
+            "into": ["3151", "3829"],
+            "tags": ["Health", "MagicPenetration", "SpellDamage"],
+            "image": {
+                "full": "3136.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 240,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatHPPoolMod": 200.0,
+                "FlatMagicDamageMod": 25.0
+            },
+            "gold": {
+                "base": 665,
+                "total": 1500,
+                "sell": 1050,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect1Amount": "15"
+            }
+        },
+        "3151": {
+            "id": 3151,
+            "name": "Liandry's Torment",
+            "description": "<stats>+80 Ability Power<br>+300 Health</stats><br><br><unique>UNIQUE Passive - Eyes of Pain:</unique> +15 Magic Penetration<br><unique>UNIQUE Passive:</unique> Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters.<br><br><i>(A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.)</i><br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)</i><br><br><i>(Unique Passives with the same name don't stack.)</i>",
+            "sanitizedDescription": "+80 Ability Power +300 Health UNIQUE Passive - Eyes of Pain: +15 Magic Penetration UNIQUE Passive: Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters. (A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.) (Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.) (Unique Passives with the same name don't stack.)",
+            "colloq": "mask",
+            "plaintext": "Spell damage burns enemies for a portion of their Health",
+            "stacks": 0,
+            "depth": 3,
+            "from": ["3136", "1026"],
+            "tags": ["Health", "MagicPenetration", "SpellDamage"],
+            "image": {
+                "full": "3151.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 240,
+                "y": 144,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatHPPoolMod": 300.0,
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 650,
+                "total": 3000,
+                "sell": 2100,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "3",
+                "Effect5Amount": "2",
+                "Effect4Amount": "100",
+                "Effect2Amount": "0.02",
+                "Effect1Amount": "15"
+            }
+        },
+        "3135": {
+            "id": 3135,
+            "name": "Void Staff",
+            "description": "<stats>+80 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> Magic damage ignores 35% of the target's Magic Resist (applies before Magic Penetration).",
+            "sanitizedDescription": "+80 Ability Power UNIQUE Passive: Magic damage ignores 35% of the target's Magic Resist (applies before Magic Penetration).",
+            "plaintext": "Increases magic damage",
+            "depth": 2,
+            "from": ["1026", "1052"],
+            "tags": ["MagicPenetration", "SpellDamage"],
+            "image": {
+                "full": "3135.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 192,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 1215,
+                "total": 2500,
+                "sell": 1750,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect1Amount": "0.35"
+            }
+        },
+        "3136": {
+            "id": 3136,
+            "name": "Haunting Guise",
+            "description": "<stats>+25 Ability Power<br>+200 Health</stats><br><br><unique>UNIQUE Passive - Eyes of Pain:</unique> +15 Magic Penetration<br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)</i><br><br><i>(Unique Passives with the same name do not stack.)</i>",
+            "sanitizedDescription": "+25 Ability Power +200 Health UNIQUE Passive - Eyes of Pain: +15 Magic Penetration (Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.) (Unique Passives with the same name do not stack.)",
+            "colloq": "mask",
+            "plaintext": "Increases magic damage",
+            "stacks": 0,
+            "depth": 2,
+            "from": ["1028", "1052"],
+            "into": ["3151", "3829"],
+            "tags": ["Health", "MagicPenetration", "SpellDamage"],
+            "image": {
+                "full": "3136.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 240,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatHPPoolMod": 200.0,
+                "FlatMagicDamageMod": 25.0
+            },
+            "gold": {
+                "base": 665,
+                "total": 1500,
+                "sell": 1050,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect1Amount": "15"
+            }
+        },
+        "3115": {
+            "id": 3115,
+            "name": "Nashor's Tooth",
+            "description": "<stats>+40% Attack Speed<br>+80 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> +20% Cooldown Reduction<br><unique>UNIQUE Passive:</unique> Basic attacks deal 15 (+15% of Ability Power) bonus magic damage on hit.<br>",
+            "sanitizedDescription": "+40% Attack Speed +80 Ability Power UNIQUE Passive: +20% Cooldown Reduction UNIQUE Passive: Basic attacks deal 15 (+15% of Ability Power) bonus magic damage on hit.",
+            "plaintext": "Increases Attack Speed, Ability Power, and Cooldown Reduction",
+            "depth": 3,
+            "from": ["3101", "3108"],
+            "tags": ["AttackSpeed", "CooldownReduction", "OnHit", "SpellDamage"],
+            "image": {
+                "full": "3115.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 384,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 80.0,
+                "PercentAttackSpeedMod": 0.4
+            },
+            "gold": {
+                "base": 930,
+                "total": 3000,
+                "sell": 2100,
+                "purchasable": true
+            }
+        },
+        "3152": {
+            "id": 3152,
+            "name": "Will of the Ancients",
+            "description": "<stats>+80 Ability Power<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> Your spells and abilities heal you for 15% of the damage dealt, calculated before your target's resistances.  This effect is reduced to one third for AoE effects.",
+            "sanitizedDescription": "+80 Ability Power +10% Cooldown Reduction UNIQUE Passive: Your spells and abilities heal you for 15% of the damage dealt, calculated before your target's resistances. This effect is reduced to one third for AoE effects.",
+            "colloq": "wota",
+            "plaintext": "Grants Spell Vamp and Ability Power",
+            "depth": 3,
+            "from": ["3145", "3108"],
+            "tags": ["CooldownReduction", "SpellDamage", "SpellVamp"],
+            "image": {
+                "full": "3152.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 288,
+                "y": 144,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 480,
+                "total": 2500,
+                "sell": 1750,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect2Amount": "0.05",
+                "Effect1Amount": "0.15"
+            }
+        },
+        "3165": {
+            "id": 3165,
+            "name": "Morellonomicon",
+            "description": "<stats>+80 Ability Power<br>+20% Cooldown Reduction<br><mana>+100% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive:</unique> Dealing magic damage to enemy champions below 40% Health inflicts Grievous Wounds for 4 seconds.<br><br><i>(Grievous Wounds reduces incoming healing and regeneration effects by 50%.)</i>",
+            "sanitizedDescription": "+80 Ability Power +20% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: Dealing magic damage to enemy champions below 40% Health inflicts Grievous Wounds for 4 seconds. (Grievous Wounds reduces incoming healing and regeneration effects by 50%.)",
+            "colloq": "nmst",
+            "plaintext": "Greatly increases Ability Power and Cooldown Reduction",
+            "depth": 3,
+            "from": ["3108", "3114", "1052"],
+            "tags": ["CooldownReduction", "ManaRegen", "SpellDamage"],
+            "image": {
+                "full": "3165.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 192,
+                "y": 192,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 445,
+                "total": 2300,
+                "sell": 1610,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "4",
+                "Effect2Amount": "40",
+                "Effect1Amount": "20"
+            }
+        },
+        "3174": {
+            "id": 3174,
+            "name": "Athene's Unholy Grail",
+            "description": "<stats>+60 Ability Power<br>+25 Magic Resist<br>+20% Cooldown Reduction<br><mana>+100% Base Mana Regen </mana></stats><br><br><mana><unique>UNIQUE Passive:</unique> Restores 30% of maximum Mana on kill or assist.<br><unique>UNIQUE Passive - Mana Font:</unique> Restores 2% of missing Mana every 5 seconds.<br></mana><br><i>(Unique Passives with the same name do not stack.)</i>",
+            "sanitizedDescription": "+60 Ability Power +25 Magic Resist +20% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: Restores 30% of maximum Mana on kill or assist. UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. (Unique Passives with the same name do not stack.)",
+            "plaintext": "Restores maximum Mana on kill or assist",
+            "depth": 3,
+            "from": ["3108", "3028", "1052"],
+            "tags": ["CooldownReduction", "ManaRegen", "SpellBlock", "SpellDamage"],
+            "image": {
+                "full": "3174.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 96,
+                "y": 240,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 60.0,
+                "FlatSpellBlockMod": 25.0
+            },
+            "gold": {
+                "base": 545,
+                "total": 2700,
+                "sell": 1890,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "2",
+                "Effect4Amount": "5",
+                "Effect2Amount": "30",
+                "Effect1Amount": "20"
+            }
+        }
+    },
+    "5.14.1": {
+        "1026": {
+            "id": 1026,
+            "name": "Blasting Wand",
+            "description": "<stats>+40 Ability Power</stats>",
+            "sanitizedDescription": "+40 Ability Power",
+            "plaintext": "Moderately increases Ability Power",
+            "into": ["3001", "3135", "3027", "3029", "3089", "3124", "3151"],
+            "tags": ["SpellDamage"],
+            "image": {
+                "full": "1026.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 240,
+                "y": 0,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 40.0
+            },
+            "gold": {
+                "base": 850,
+                "total": 850,
+                "sell": 595,
+                "purchasable": true
+            }
+        },
+        "1058": {
+            "id": 1058,
+            "name": "Needlessly Large Rod",
+            "description": "<stats>+60 Ability Power</stats>",
+            "sanitizedDescription": "+60 Ability Power",
+            "colloq": "nlr",
+            "plaintext": "Greatly increases Ability Power",
+            "into": ["3089", "3157", "3003", "3007", "3090", "3116", "3285"],
+            "tags": ["SpellDamage"],
+            "maps": {
+                "10": false
+            },
+            "image": {
+                "full": "1058.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 192,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 60.0
+            },
+            "gold": {
+                "base": 1250,
+                "total": 1250,
+                "sell": 875,
+                "purchasable": true
+            }
+        },
+        "3089": {
+            "id": 3089,
+            "name": "Rabadon's Deathcap",
+            "description": "<stats>+120 Ability Power  </stats><br><br><unique>UNIQUE Passive:</unique> Increases Ability Power by 35%.",
+            "sanitizedDescription": "+120 Ability Power UNIQUE Passive: Increases Ability Power by 35%.",
+            "colloq": "dc;banksys;hat",
+            "plaintext": "Massively increases Ability Power",
+            "depth": 2,
+            "from": ["1026", "1058", "1052"],
+            "tags": ["SpellDamage"],
+            "maps": {
+                "10": false
+            },
+            "image": {
+                "full": "3089.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 384,
+                "y": 432,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 120.0
+            },
+            "gold": {
+                "base": 965,
+                "total": 3500,
+                "sell": 2450,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect1Amount": "35"
+            }
+        },
+        "3157": {
+            "id": 3157,
+            "name": "Zhonya's Hourglass",
+            "description": "<stats>+100 Ability Power<br>+50 Armor  </stats><br><br><active>UNIQUE Active - Stasis:</active> Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (90 second cooldown).",
+            "sanitizedDescription": "+100 Ability Power +50 Armor UNIQUE Active - Stasis: Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (90 second cooldown).",
+            "colloq": "zhg;zonyas",
+            "plaintext": "Activate to become invincible but unable to take actions",
+            "depth": 3,
+            "from": ["3191", "1058"],
+            "tags": ["Active", "Armor", "SpellDamage"],
+            "maps": {
+                "10": false
+            },
+            "image": {
+                "full": "3157.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 48,
+                "y": 192,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatArmorMod": 50.0,
+                "FlatMagicDamageMod": 100.0
+            },
+            "gold": {
+                "base": 550,
+                "total": 3000,
+                "sell": 2100,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "90",
+                "Effect2Amount": "2.5",
+                "Effect1Amount": "0"
+            }
+        },
+        "3116": {
+            "id": 3116,
+            "name": "Rylai's Crystal Scepter",
+            "description": "<stats>+400 Health<br>+100 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> Damaging spells and abilities apply a Movement Speed reduction to enemies based on the spell type:<br><br><active>Single Target:</active> 40% reduction for 1.5 seconds. <br><active>Area of Effect:</active> 40% reduction for 1 seconds<br><active>Damage over Time or Multi-hit:</active> 20% reduction for 1 seconds.<br><active>Summoned Minions:</active> 20% reduction for 1 seconds.<br><br><i>(If a spell fits in more than one category, it uses the weakest slow value.)</i>",
+            "sanitizedDescription": "+400 Health +100 Ability Power UNIQUE Passive: Damaging spells and abilities apply a Movement Speed reduction to enemies based on the spell type: Single Target: 40% reduction for 1.5 seconds. Area of Effect: 40% reduction for 1 seconds Damage over Time or Multi-hit: 20% reduction for 1 seconds. Summoned Minions: 20% reduction for 1 seconds. (If a spell fits in more than one category, it uses the weakest slow value.)",
+            "plaintext": "Abilities slow enemies",
+            "depth": 3,
+            "from": ["1058", "1052", "1011"],
+            "tags": ["Health", "Slow", "SpellDamage"],
+            "image": {
+                "full": "3116.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 432,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatHPPoolMod": 400.0,
+                "FlatMagicDamageMod": 100.0
+            },
+            "gold": {
+                "base": 315,
+                "total": 3000,
+                "sell": 2100,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "1.5",
+                "Effect6Amount": "-0.4",
+                "Effect5Amount": "1",
+                "Effect4Amount": "1",
+                "Effect2Amount": "-0.2",
+                "Effect1Amount": "-0.4"
+            }
+        },
+        "3003": {
+            "id": 3003,
+            "name": "Archangel's Staff",
+            "description": "<stats>+80 Ability Power<br><mana>+250 Mana<br>+50% Base Mana Regen </mana></stats><br><br><mana><unique>UNIQUE Passive - Insight:</unique> Grants Ability Power equal to 3% of maximum Mana.<br><unique>UNIQUE Passive - Mana Charge:</unique> Grants +8 maximum Mana (max +750 Mana) for each spell cast and Mana expenditure (occurs up to 2 times every 8 seconds). Transforms into Seraph's Embrace at +750 Mana.</mana><br><br><i>(Unique Passives with the same name don't stack.)</i>",
+            "sanitizedDescription": "+80 Ability Power +250 Mana +50% Base Mana Regen UNIQUE Passive - Insight: Grants Ability Power equal to 3% of maximum Mana. UNIQUE Passive - Mana Charge: Grants +8 maximum Mana (max +750 Mana) for each spell cast and Mana expenditure (occurs up to 2 times every 8 seconds). Transforms into Seraph's Embrace at +750 Mana. (Unique Passives with the same name don't stack.)",
+            "colloq": "aa",
+            "plaintext": "Increases Ability Power based on maximum Mana",
+            "depth": 3,
+            "from": ["3070", "1058"],
+            "into": ["3040"],
+            "tags": ["Mana", "ManaRegen", "SpellDamage"],
+            "image": {
+                "full": "3003.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 0,
+                "y": 240,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMPPoolMod": 250.0,
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 1030,
+                "total": 3000,
+                "sell": 2100,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "750",
+                "Effect5Amount": "8",
+                "Effect4Amount": "2",
+                "Effect2Amount": "8",
+                "Effect1Amount": "0.03"
+            }
+        },
+        "3048": {
+            "id": 3048,
+            "name": "Seraph's Embrace",
+            "description": "<stats>+80 Ability Power<br><mana>+1000 Mana<br>+50% Base Mana Regen </mana></stats><br><br><mana><unique>UNIQUE Passive - Insight:</unique> Grants Ability Power equal to 3% of maximum Mana.</mana><br><active>UNIQUE Active - Mana Shield:</active> Consumes 20% of current Mana to grant a shield for 3 seconds that absorbs damage equal to 150 plus the amount of Mana consumed (120 second cooldown).<br><br><i>(Unique Passives with the same name don't stack.)</i>",
+            "sanitizedDescription": "+80 Ability Power +1000 Mana +50% Base Mana Regen UNIQUE Passive - Insight: Grants Ability Power equal to 3% of maximum Mana. UNIQUE Active - Mana Shield: Consumes 20% of current Mana to grant a shield for 3 seconds that absorbs damage equal to 150 plus the amount of Mana consumed (120 second cooldown). (Unique Passives with the same name don't stack.)",
+            "depth": 4,
+            "from": ["3007"],
+            "specialRecipe": 3007,
+            "inStore": false,
+            "tags": ["Active"],
+            "maps": {
+                "1": false,
+                "10": false,
+                "12": false
+            },
+            "image": {
+                "full": "3048.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 240,
+                "y": 336,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMPPoolMod": 1000.0,
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 2700,
+                "total": 2700,
+                "sell": 3990,
+                "purchasable": false
+            }
+        },
+        "3027": {
+            "id": 3027,
+            "name": "Rod of Ages",
+            "description": "<stats>+300 Health<br><mana>+400 Mana</mana><br>+60 Ability Power</stats><br><br><passive>Passive:</passive> Grants +20 Health, +40 Mana, and +4 Ability Power per stack (max +200 Health, +400 Mana, and +40 Ability Power). Grants 1 stack per minute (max 10 stacks).<br><unique>UNIQUE Passive - Valor's Reward:</unique> Upon leveling up, restores 150 Health and 200 Mana over 8 seconds.<br><br><i>(Unique Passives with the same name don't stack.)</i>",
+            "sanitizedDescription": "+300 Health +400 Mana +60 Ability Power Passive: Grants +20 Health, +40 Mana, and +4 Ability Power per stack (max +200 Health, +400 Mana, and +40 Ability Power). Grants 1 stack per minute (max 10 stacks). UNIQUE Passive - Valor's Reward: Upon leveling up, restores 150 Health and 200 Mana over 8 seconds. (Unique Passives with the same name don't stack.)",
+            "colloq": "roa",
+            "plaintext": "Greatly increases Health, Mana, and Ability Power",
+            "depth": 3,
+            "from": ["3010", "1026"],
+            "tags": ["Health", "HealthRegen", "Mana", "ManaRegen", "SpellDamage"],
+            "image": {
+                "full": "3027.png",
+                "sprite": "item0.png",
+                "group": "item",
+                "x": 144,
+                "y": 288,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatHPPoolMod": 300.0,
+                "FlatMPPoolMod": 400.0,
+                "FlatMagicDamageMod": 60.0
+            },
+            "gold": {
+                "base": 650,
+                "total": 2700,
+                "sell": 1890,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect8Amount": "8",
+                "Effect3Amount": "4",
+                "Effect7Amount": "200",
+                "Effect6Amount": "150",
+                "Effect5Amount": "10",
+                "Effect4Amount": "1",
+                "Effect2Amount": "40",
+                "Effect1Amount": "20"
+            }
+        },
+        "3136": {
+            "id": 3136,
+            "name": "Haunting Guise",
+            "description": "<stats>+25 Ability Power<br>+200 Health</stats><br><br><unique>UNIQUE Passive - Eyes of Pain:</unique> +15 Magic Penetration<br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)</i><br><br><i>(Unique Passives with the same name do not stack.)</i>",
+            "sanitizedDescription": "+25 Ability Power +200 Health UNIQUE Passive - Eyes of Pain: +15 Magic Penetration (Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.) (Unique Passives with the same name do not stack.)",
+            "colloq": "mask",
+            "plaintext": "Increases magic damage",
+            "stacks": 0,
+            "depth": 2,
+            "from": ["1028", "1052"],
+            "into": ["3151"],
+            "tags": ["Health", "MagicPenetration", "SpellDamage"],
+            "image": {
+                "full": "3136.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 240,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatHPPoolMod": 200.0,
+                "FlatMagicDamageMod": 25.0
+            },
+            "gold": {
+                "base": 650,
+                "total": 1485,
+                "sell": 1040,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect1Amount": "15"
+            }
+        },
+        "3151": {
+            "id": 3151,
+            "name": "Liandry's Torment",
+            "description": "<stats>+50 Ability Power<br>+300 Health</stats><br><br><unique>UNIQUE Passive - Eyes of Pain:</unique> +15 Magic Penetration<br><unique>UNIQUE Passive:</unique> Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters.<br><br><i>(A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.)</i><br><br><i>(Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.)</i><br><br><i>(Unique Passives with the same name don't stack.)</i>",
+            "sanitizedDescription": "+50 Ability Power +300 Health UNIQUE Passive - Eyes of Pain: +15 Magic Penetration UNIQUE Passive: Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters. (A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.) (Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.) (Unique Passives with the same name don't stack.)",
+            "colloq": "mask",
+            "plaintext": "Spell damage burns enemies for a portion of their Health",
+            "stacks": 0,
+            "depth": 3,
+            "from": ["3136", "1052"],
+            "tags": ["Health", "MagicPenetration", "SpellDamage"],
+            "image": {
+                "full": "3151.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 240,
+                "y": 144,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatHPPoolMod": 300.0,
+                "FlatMagicDamageMod": 50.0
+            },
+            "gold": {
+                "base": 980,
+                "total": 2900,
+                "sell": 2030,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "3",
+                "Effect5Amount": "2",
+                "Effect4Amount": "100",
+                "Effect2Amount": "0.02",
+                "Effect1Amount": "15"
+            }
+        },
+        "3135": {
+            "id": 3135,
+            "name": "Void Staff",
+            "description": "<stats>+70 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> Magic damage ignores 35% of the target's Magic Resist (applies before Magic Penetration).",
+            "sanitizedDescription": "+70 Ability Power UNIQUE Passive: Magic damage ignores 35% of the target's Magic Resist (applies before Magic Penetration).",
+            "plaintext": "Increases magic damage",
+            "depth": 2,
+            "from": ["1026", "1052"],
+            "tags": ["MagicPenetration", "SpellDamage"],
+            "image": {
+                "full": "3135.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 192,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 70.0
+            },
+            "gold": {
+                "base": 1000,
+                "total": 2295,
+                "sell": 1607,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect1Amount": "0.35"
+            }
+        },
+        "3115": {
+            "id": 3115,
+            "name": "Nashor's Tooth",
+            "description": "<stats>+50% Attack Speed<br>+60 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> +20% Cooldown Reduction<br><unique>UNIQUE Passive:</unique> Basic attacks deal 15 (+15% of Ability Power) bonus magic damage on hit.<br>",
+            "sanitizedDescription": "+50% Attack Speed +60 Ability Power UNIQUE Passive: +20% Cooldown Reduction UNIQUE Passive: Basic attacks deal 15 (+15% of Ability Power) bonus magic damage on hit.",
+            "plaintext": "Increases Attack Speed, Ability Power, and Cooldown Reduction",
+            "depth": 3,
+            "from": ["3101", "3108"],
+            "tags": ["AttackSpeed", "CooldownReduction", "OnHit", "SpellDamage"],
+            "image": {
+                "full": "3115.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 384,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 60.0,
+                "PercentAttackSpeedMod": 0.5
+            },
+            "gold": {
+                "base": 850,
+                "total": 2920,
+                "sell": 2044,
+                "purchasable": true
+            }
+        },
+        "3152": {
+            "id": 3152,
+            "name": "Will of the Ancients",
+            "description": "<stats>+80 Ability Power<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> +20% Spell Vamp<br><br><i>(Spell Vamp: Abilities heal for a percentage of the damage they deal. Area of Effect spells only grant one-third of the healing from Spell Vamp.)</i>",
+            "sanitizedDescription": "+80 Ability Power +10% Cooldown Reduction UNIQUE Passive: +20% Spell Vamp (Spell Vamp: Abilities heal for a percentage of the damage they deal. Area of Effect spells only grant one-third of the healing from Spell Vamp.)",
+            "colloq": "wota",
+            "plaintext": "Grants Spell Vamp and Ability Power",
+            "depth": 3,
+            "from": ["3145", "3108"],
+            "tags": ["CooldownReduction", "SpellDamage", "SpellVamp"],
+            "image": {
+                "full": "3152.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 288,
+                "y": 144,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 480,
+                "total": 2500,
+                "sell": 1750,
+                "purchasable": true
+            }
+        },
+        "3165": {
+            "id": 3165,
+            "name": "Morellonomicon",
+            "description": "<stats>+80 Ability Power<br>+20% Cooldown Reduction<br><mana>+100% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive:</unique> Dealing magic damage to enemy champions below 40% Health inflicts Grievous Wounds for 4 seconds.<br><br><i>(Grievous Wounds reduces incoming healing and regeneration effects by 50%.)</i>",
+            "sanitizedDescription": "+80 Ability Power +20% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: Dealing magic damage to enemy champions below 40% Health inflicts Grievous Wounds for 4 seconds. (Grievous Wounds reduces incoming healing and regeneration effects by 50%.)",
+            "colloq": "nmst",
+            "plaintext": "Greatly increases Ability Power and Cooldown Reduction",
+            "depth": 3,
+            "from": ["3108", "3114"],
+            "tags": ["CooldownReduction", "ManaRegen", "SpellDamage"],
+            "image": {
+                "full": "3165.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 192,
+                "y": 192,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 80.0
+            },
+            "gold": {
+                "base": 880,
+                "total": 2300,
+                "sell": 1610,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "4",
+                "Effect2Amount": "40",
+                "Effect1Amount": "20"
+            }
+        },
+        "3174": {
+            "id": 3174,
+            "name": "Athene's Unholy Grail",
+            "description": "<stats>+60 Ability Power<br>+25 Magic Resist<br>+20% Cooldown Reduction<br><mana>+100% Base Mana Regen </mana></stats><br><br><mana><unique>UNIQUE Passive:</unique> Restores 30% of maximum Mana on kill or assist.<br><unique>UNIQUE Passive - Mana Font:</unique> Restores 2% of missing Mana every 5 seconds.<br></mana><br><i>(Unique Passives with the same name do not stack.)</i>",
+            "sanitizedDescription": "+60 Ability Power +25 Magic Resist +20% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: Restores 30% of maximum Mana on kill or assist. UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. (Unique Passives with the same name do not stack.)",
+            "plaintext": "Restores maximum Mana on kill or assist",
+            "depth": 3,
+            "from": ["3108", "3028"],
+            "tags": ["CooldownReduction", "ManaRegen", "SpellBlock", "SpellDamage"],
+            "image": {
+                "full": "3174.png",
+                "sprite": "item1.png",
+                "group": "item",
+                "x": 96,
+                "y": 240,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 60.0,
+                "FlatSpellBlockMod": 25.0
+            },
+            "gold": {
+                "base": 980,
+                "total": 2700,
+                "sell": 1890,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "2",
+                "Effect4Amount": "5",
+                "Effect2Amount": "30",
+                "Effect1Amount": "20"
+            }
+        },
+    }
+}
