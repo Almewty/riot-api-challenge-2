@@ -5,11 +5,12 @@ angular.module('riotApiChallenge2App', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+	'n3-charts.linechart'
 ])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider
-            .otherwise('/');
+	.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+		$urlRouterProvider
+			.otherwise('/');
 
-        $locationProvider.html5Mode(true);
-    });
+		$locationProvider.html5Mode(true);
+	});
