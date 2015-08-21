@@ -1,11 +1,11 @@
 div(ng-include='"components/navbar/navbar.html"')
 
 
-.row
-  .col-lg-12      
-    table.table(ng-controller='ItemlistCtrl')
-      tr(ng-repeat='item in items')
-        td
-          img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.id}}.png")
-        td
-          {{item.name}}
+.container
+  .row(ng-controller="ItemlistCtrl")
+    .col-lg-6(ng-repeat="item in items | orderBy: 'name'")
+      .col-lg-4.list-item
+        img(ng-source="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/{{item.id}}.png")
+      .col-lg-8.item-stats
+        p {{item.name}}
+    
