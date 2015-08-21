@@ -37,6 +37,43 @@ exports.show = function (req, res) {
 	});
 };
 
+exports.byItem = function (req, res) {
+	var itemId = req.params.itemId;
+	if (isNaN(itemId))
+		return handleError(res, "Bad item id");
+	itemId = Number(itemId);
+	Match.aggregate([
+			{
+				$match: {
+					loaded: true
+				}
+			}, {
+				$unwind: '$participants'
+			}, {
+				$match: {
+					$or: [{
+						'participants.stats.item0': itemId
+			}, {
+						'participants.stats.item1': itemId
+			}, {
+						'participants.stats.item2': itemId
+			}, {
+						'participants.stats.item3': itemId
+			}, {
+						'participants.stats.item4': itemId
+			}, {
+						'participants.stats.item5': itemId
+			}, {
+						'participants.stats.item6': itemId
+			}]
+				}
+			}],
+		function (err, result) {
+			//			console.log(result);
+			res.status(200).json(result);
+		});
+};
+
 function handleError(res, err) {
 	return res.status(500).send(err);
 }

@@ -1,7 +1,6 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-	ParticipantSchema = require('../participant/participant.schema'),
 	Schema = mongoose.Schema;
 
 var MatchSchema = new Schema({
@@ -16,11 +15,10 @@ var MatchSchema = new Schema({
 	matchDuration: Number,
 	mapId: Number,
 	matchVersion: String,
-	participants: [ParticipantSchema]
-		//	participants: [{
-		//		type: Schema.Types.ObjectId,
-		//		ref: 'Participant'
-		//	}]
+	participants: [{
+		type: Schema.Types.ObjectId,
+		ref: 'Participant'
+	}]
 });
 
 

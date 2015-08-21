@@ -4,6 +4,10 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 var ParticipantSchema = new Schema({
+	region: String,
+	type: String,
+	patch: String,
+
 	championId: Number,
 	highestAchievedSeasonTier: String,
 	spell1Id: Number,
@@ -11,4 +15,4 @@ var ParticipantSchema = new Schema({
 	stats: Schema.Types.Mixed
 });
 
-module.exports = ParticipantSchema;
+module.exports = mongoose.model('Participant', ParticipantSchema);

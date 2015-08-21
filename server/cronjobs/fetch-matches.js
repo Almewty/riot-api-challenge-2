@@ -1,4 +1,5 @@
 var Match = require('../api/match/match.model'),
+	Participant = require('../api/participant/participant.model'),
 	config = require('../config/environment'),
 	async = require('async'),
 	_ = require('underscore'),
@@ -8,7 +9,7 @@ var Match = require('../api/match/match.model'),
 	});
 
 var matchProps = _.keys(Match.schema.paths);
-var participantProps = _.keys(Match.schema.paths.participants.schema.paths);
+var participantProps = _.keys(Participant.schema.paths);
 
 var loadDataFromRiot = function loadDataFromRiot(match, callback) {
 	// load match data from riot api
@@ -25,14 +26,24 @@ var loadDataFromRiot = function loadDataFromRiot(match, callback) {
 			}
 		}
 		async.each(data.participants, function (part, cb) {
-			var p = {};
+			var p = new Participant();
 			for (var pKey in part) {
 				if (participantProps.indexOf(pKey) >= 0) {
 					p[pKey] = part[pKey];
 				}
 			}
-			match.participants.push(p);
-			cb();
+			for (var i = 0; i < matchProps.length; i++) {
+				var mKey = matchProps[i];
+				if (mKey === '_id' || mKey === '__v')
+					continue;
+				if (participantProps.indexOf(mKey) >= 0) {
+					p[mKey] = match[mKey];
+				}
+			}
+			p.save(function (err) {
+				match.participants.push(p._id);
+				cb();
+			});
 		}, function (err) {
 			if (err) return callback(err);
 			match.save(callback);
