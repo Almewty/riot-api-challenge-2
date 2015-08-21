@@ -5,7 +5,7 @@ div(ng-include='"components/navbar/navbar.html"')
   .row(ng-controller="ItemlistCtrl")
     .col-lg-6(ng-repeat="item in items | orderBy: 'name'")
       .col-lg-4.list-item
-        img(ng-source="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/{{item.id}}.png")
+        img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/item/{{item.id}}.png")
       .col-lg-8.item-stats
         p {{item.name}}
     
