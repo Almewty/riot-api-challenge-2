@@ -1,5 +1,4 @@
-var Match = require('../api/match/match.model.js'),
-	Participant = require('../api/participant/participant.model.js'),
+var Match = require('../api/match/match.model'),
 	config = require('../config/environment'),
 	async = require('async'),
 	_ = require('underscore'),
@@ -9,7 +8,7 @@ var Match = require('../api/match/match.model.js'),
 	});
 
 var matchProps = _.keys(Match.schema.paths);
-var participantProps = _.keys(Participant.schema.paths);
+var participantProps = _.keys(Match.schema.paths.participants.schema.paths);
 
 var loadDataFromRiot = function loadDataFromRiot(match, callback) {
 	// load match data from riot api
@@ -26,18 +25,14 @@ var loadDataFromRiot = function loadDataFromRiot(match, callback) {
 			}
 		}
 		async.each(data.participants, function (part, cb) {
-			var p = new Participant();
-			p.match = match._id;
+			var p = {};
 			for (var pKey in part) {
 				if (participantProps.indexOf(pKey) >= 0) {
 					p[pKey] = part[pKey];
 				}
 			}
-			p.save(function (err) {
-				if (err) return cb(err);
-				match.participants.push(p._id);
-				cb();
-			});
+			match.participants.push(p);
+			cb();
 		}, function (err) {
 			if (err) return callback(err);
 			match.save(callback);

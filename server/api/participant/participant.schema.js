@@ -8,11 +8,7 @@ var ParticipantSchema = new Schema({
 	highestAchievedSeasonTier: String,
 	spell1Id: Number,
 	spell2Id: Number,
-	stats: Schema.Types.Mixed,
-	match: {
-		type: Schema.Types.ObjectId,
-		ref: 'Match'
-	}
+	stats: Schema.Types.Mixed
 });
 
-module.exports = mongoose.model('Participant', ParticipantSchema);
+module.exports = ParticipantSchema;
