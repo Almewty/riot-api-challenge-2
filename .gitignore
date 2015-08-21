@@ -30,3 +30,5 @@ node_modules
 .tmp
 
 local.env.js
+
+bower_components
