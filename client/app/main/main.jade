@@ -2,14 +2,14 @@ div(ng-include='"components/navbar/navbar.html"')
 
 
 .container(ng-controller="MainCtrl")
-  .container.chart-container(style="width: 700px; height: 700px;")
-    chart(value="myChart")
-
+  .container.chart-container
+    canvas(id="bar", class="chart chart-bar", data="data", labels="labels", series="series")
+    
   .container.item-container
     .row
       .col-md-12
       .col-md-offset-2.col-md-8.itemlist
         .list-items(ng-repeat="item in items")
           a(ng-href="#", ng-click="changeData(item.id);")
-            img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.id}}.png")
+            img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.id}}.png", tooltip="{{item.name}}", id="item-{{item.id}}")
     

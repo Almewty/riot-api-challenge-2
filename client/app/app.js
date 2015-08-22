@@ -6,7 +6,7 @@ angular.module('riotApiChallenge2App', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'chartjs-directive'
+  'chart.js'
 
 ])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
