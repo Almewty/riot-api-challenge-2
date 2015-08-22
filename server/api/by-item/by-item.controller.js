@@ -16,46 +16,45 @@ exports.byItem = function (req, res) {
 		return handleError(res, "Bad item id");
 	itemId = Number(itemId);
 	Participant.find({
-			$or: [{
-				'stats.item0': itemId
+		$or: [{
+			'stats.item0': itemId
 			}, {
-				'stats.item1': itemId
+			'stats.item1': itemId
 			}, {
-				'stats.item2': itemId
+			'stats.item2': itemId
 			}, {
-				'stats.item3': itemId
+			'stats.item3': itemId
 			}, {
-				'stats.item4': itemId
+			'stats.item4': itemId
 			}, {
-				'stats.item5': itemId
+			'stats.item5': itemId
 			}, {
-				'stats.item6': itemId
+			'stats.item6': itemId
 			}]
-		},
-		function (err, data) {
-			if (err) return handleError(res, err);
-			var total = data.length;
-			data = groupBy(data, 'patch');
-			for (var p in data) {
-				data[p] = groupBy(data[p], 'championId');
-				var thisPatch = 0;
-				for (var c in data[p]) {
-					var length = data[p][c].length;
-					thisPatch += length;
-					var winLoss = _.countBy(data[p][c], function (p) {
-						return p.stats.winner ? 'win' : 'loss';
-					});
-					data[p][c] = {};
-					data[p][c] = _.extend(data[p][c], winLoss);
-					data[p][c]['win'] = data[p][c]['win'] || 0;
-					data[p][c]['loss'] = data[p][c]['loss'] || 0;
-					data[p][c]['total'] = length;
-				}
-				data[p].total = thisPatch;
+	}, 'patch championId stats', function (err, data) {
+		if (err) return handleError(res, err);
+		var total = data.length;
+		data = groupBy(data, 'patch');
+		for (var p in data) {
+			data[p] = groupBy(data[p], 'championId');
+			var thisPatch = 0;
+			for (var c in data[p]) {
+				var length = data[p][c].length;
+				thisPatch += length;
+				var winLoss = _.countBy(data[p][c], function (p) {
+					return p.stats.winner ? 'win' : 'loss';
+				});
+				data[p][c] = {};
+				data[p][c] = _.extend(data[p][c], winLoss);
+				data[p][c]['win'] = data[p][c]['win'] || 0;
+				data[p][c]['loss'] = data[p][c]['loss'] || 0;
+				data[p][c]['total'] = length;
 			}
-			data.total = total;
-			return res.status(200).json(data);
-		});
+			data[p].total = thisPatch;
+		}
+		data.total = total;
+		return res.status(200).json(data);
+	});
 };
 
 function groupBy(arr, prop) {
