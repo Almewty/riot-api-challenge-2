@@ -6,11 +6,12 @@ angular.module('riotApiChallenge2App', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-	'n3-charts.linechart'
-])
-	.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-		$urlRouterProvider
-			.otherwise('/');
+  'chartjs-directive'
 
-		$locationProvider.html5Mode(true);
-	});
+])
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        $urlRouterProvider
+            .otherwise('/');
+
+        $locationProvider.html5Mode(true);
+    });

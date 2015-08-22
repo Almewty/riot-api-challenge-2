@@ -725,6 +725,46 @@
                 "Effect1Amount": "0"
             }
         },
+        "3285": {
+            "id": 3285,
+            "name": "Luden's Echo",
+            "description": "<stats>+100 Ability Power<br>+10% Movement Speed</stats><br><br><unique>UNIQUE Passive:</unique> Gain charges upon moving or casting. At 100 charges, the next spell hit expends all charges to deal 100 (+10% AP) bonus magic damage to up to 4 targets on hit.",
+            "sanitizedDescription": "+100 Ability Power +10% Movement Speed UNIQUE Passive: Gain charges upon moving or casting. At 100 charges, the next spell hit expends all charges to deal 100 (+10% AP) bonus magic damage to up to 4 targets on hit.",
+            "plaintext": "Increases Ability Power and Movement Speed",
+            "depth": 3,
+            "from": ["1058", "3113"],
+            "tags": ["NonbootsMovement", "OnHit", "SpellDamage"],
+            "maps": {
+                "10": false
+            },
+            "image": {
+                "full": "3285.png",
+                "sprite": "item2.png",
+                "group": "item",
+                "x": 288,
+                "y": 288,
+                "w": 48,
+                "h": 48
+            },
+            "stats": {
+                "FlatMagicDamageMod": 100.0,
+                "PercentMovementSpeedMod": 0.1
+            },
+            "gold": {
+                "base": 900,
+                "total": 3000,
+                "sell": 2100,
+                "purchasable": true
+            },
+            "effect": {
+                "Effect3Amount": "4",
+                "Effect6Amount": "10",
+                "Effect5Amount": "35",
+                "Effect4Amount": "0.1",
+                "Effect2Amount": "100",
+                "Effect1Amount": "100"
+            }
+        },
         "3116": {
             "id": 3116,
             "name": "Rylai's Crystal Scepter",
@@ -1106,6 +1146,6 @@
                 "Effect2Amount": "30",
                 "Effect1Amount": "20"
             }
-        },
+        }
     }
 }

@@ -2,5 +2,14 @@ div(ng-include='"components/navbar/navbar.html"')
 
 
 .container(ng-controller="MainCtrl")
-  linechart(data="data", option="options")
+  .container.chart-container
+    chart(value="myChart")
+
+  .container.item-container
+    .row
+      .col-md-12
+      .col-md-offset-1.col-md-10.itemlist
+        .list-items(ng-repeat="item in items")
+          a(ng-href="#", ng-click="changeData(item.id);")
+            img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.id}}.png")
     
