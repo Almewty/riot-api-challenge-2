@@ -1,61 +1,35 @@
 {
     "5.11.1": {
-        "1026": {
-            "id": 1026,
-            "name": "Blasting Wand",
-            "description": "<stats>+40 Ability Power</stats>",
-            "sanitizedDescription": "+40 Ability Power",
-            "plaintext": "Moderately increases Ability Power",
-            "into": ["3001", "3135", "3027", "3029", "3089", "3116", "3124", "3090", "3003", "3007", "3286"],
-            "tags": ["SpellDamage"],
+        "3001": {
+            "id": 3001,
+            "name": "Abyssal Scepter",
+            "description": "<stats>+70 Ability Power<br>+50 Magic Resist</stats><br><br><aura>UNIQUE Aura:</aura> Reduces the Magic Resist of nearby enemies by 20.",
+            "sanitizedDescription": "+70 Ability Power +50 Magic Resist UNIQUE Aura: Reduces the Magic Resist of nearby enemies by 20.",
+            "plaintext": "Reduces Magic Resist of nearby enemies",
+            "depth": 3,
+            "from": ["1026", "1057"],
+            "tags": ["Aura", "SpellBlock", "SpellDamage"],
             "image": {
-                "full": "1026.png",
+                "full": "3001.png",
                 "sprite": "item0.png",
                 "group": "item",
-                "x": 240,
-                "y": 0,
+                "x": 432,
+                "y": 192,
                 "w": 48,
                 "h": 48
             },
             "stats": {
-                "FlatMagicDamageMod": 40.0
+                "FlatMagicDamageMod": 70.0,
+                "FlatSpellBlockMod": 50.0
             },
             "gold": {
-                "base": 860,
-                "total": 860,
-                "sell": 602,
+                "base": 730,
+                "total": 2440,
+                "sell": 1708,
                 "purchasable": true
-            }
-        },
-        "1058": {
-            "id": 1058,
-            "name": "Needlessly Large Rod",
-            "description": "<stats>+80 Ability Power</stats>",
-            "sanitizedDescription": "+80 Ability Power",
-            "colloq": "nlr",
-            "plaintext": "Greatly increases Ability Power",
-            "into": ["3089", "3157", "3285"],
-            "tags": ["SpellDamage"],
-            "maps": {
-                "10": false
             },
-            "image": {
-                "full": "1058.png",
-                "sprite": "item0.png",
-                "group": "item",
-                "x": 192,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            },
-            "stats": {
-                "FlatMagicDamageMod": 80.0
-            },
-            "gold": {
-                "base": 1600,
-                "total": 1600,
-                "sell": 1120,
-                "purchasable": true
+            "effect": {
+                "Effect1Amount": "-20"
             }
         },
         "3089": {
@@ -594,62 +568,36 @@
         }
     },
     "5.14.1": {
-        "1026": {
-            "id": 1026,
-            "name": "Blasting Wand",
-            "description": "<stats>+40 Ability Power</stats>",
-            "sanitizedDescription": "+40 Ability Power",
-            "plaintext": "Moderately increases Ability Power",
-            "into": ["3001", "3135", "3027", "3029", "3089", "3124", "3151"],
-            "tags": ["SpellDamage"],
+        "3001": {
+            "id": 3001,
+            "name": "Abyssal Scepter",
+            "description": "<stats>+70 Ability Power<br>+50 Magic Resist</stats><br><br><aura>UNIQUE Aura:</aura> Reduces the Magic Resist of nearby enemies by 20.",
+            "sanitizedDescription": "+70 Ability Power +50 Magic Resist UNIQUE Aura: Reduces the Magic Resist of nearby enemies by 20.",
+            "plaintext": "Reduces Magic Resist of nearby enemies",
+            "depth": 3,
+            "from": ["1026", "1057"],
+            "tags": ["Aura", "SpellBlock", "SpellDamage"],
             "image": {
-                "full": "1026.png",
+                "full": "3001.png",
                 "sprite": "item0.png",
                 "group": "item",
-                "x": 240,
-                "y": 0,
+                "x": 432,
+                "y": 192,
                 "w": 48,
                 "h": 48
             },
             "stats": {
-                "FlatMagicDamageMod": 40.0
+                "FlatMagicDamageMod": 70.0,
+                "FlatSpellBlockMod": 50.0
             },
             "gold": {
-                "base": 850,
-                "total": 850,
-                "sell": 595,
+                "base": 730,
+                "total": 2430,
+                "sell": 1701,
                 "purchasable": true
-            }
-        },
-        "1058": {
-            "id": 1058,
-            "name": "Needlessly Large Rod",
-            "description": "<stats>+60 Ability Power</stats>",
-            "sanitizedDescription": "+60 Ability Power",
-            "colloq": "nlr",
-            "plaintext": "Greatly increases Ability Power",
-            "into": ["3089", "3157", "3003", "3007", "3090", "3116", "3285"],
-            "tags": ["SpellDamage"],
-            "maps": {
-                "10": false
             },
-            "image": {
-                "full": "1058.png",
-                "sprite": "item0.png",
-                "group": "item",
-                "x": 192,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            },
-            "stats": {
-                "FlatMagicDamageMod": 60.0
-            },
-            "gold": {
-                "base": 1250,
-                "total": 1250,
-                "sell": 875,
-                "purchasable": true
+            "effect": {
+                "Effect1Amount": "-20"
             }
         },
         "3089": {

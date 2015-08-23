@@ -7,7 +7,7 @@ div(ng-include='"components/navbar/navbar.html"')
 		
 	.container.item-container
 		.row.itemlist
-			.list-items(ng-repeat="item in items")
+			.list-items(ng-repeat="item in items|orderBy: 'name'")
 				a(ng-href="#", ng-click="changeData(item.id);")
 					img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.id}}.png", tooltip="{{item.name}}", id="item-{{item.id}}")
 		
