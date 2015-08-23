@@ -10,10 +10,10 @@ var _ = require('lodash');
 var Participant = require('../participant/participant.model');
 
 // Get list of things
-exports.byItem = function (req, res) {
+exports.byItem = function (req, dataCallback) {
 	var itemId = req.params.itemId;
 	if (isNaN(itemId))
-		return handleError(res, "Bad item id");
+		return dataCallback("Bad item id");
 	itemId = Number(itemId);
 	Participant.find({
 		$or: [{
@@ -32,7 +32,7 @@ exports.byItem = function (req, res) {
 			'stats.item6': itemId
 			}]
 	}, 'patch championId stats', function (err, data) {
-		if (err) return handleError(res, err);
+		if (err) return dataCallback(err);
 		var total = data.length;
 		data = groupBy(data, 'patch');
 		for (var p in data) {
@@ -53,7 +53,8 @@ exports.byItem = function (req, res) {
 			data[p].total = thisPatch;
 		}
 		data.total = total;
-		return res.status(200).json(data);
+		if (dataCallback)
+			dataCallback(null, data);
 	});
 };
 
@@ -64,8 +65,4 @@ function groupBy(arr, prop) {
 		else hist[a[prop]] = [a];
 	});
 	return hist;
-}
-
-function handleError(res, err) {
-	return res.status(500).send(err);
 }
