@@ -8,8 +8,8 @@ angular.module('riotApiChallenge2App')
         return {
             loadItems: function (callback) {
                 $http.get('/app/itemList/apitems.json').success(function (data) {
-                    oldItems = data["5.11.1"];
-                    newItems = data["5.14.1"];
+                    oldItems = data['5.11.1'];
+                    newItems = data['5.14.1'];
                     callback();
                 });
             },

@@ -6,6 +6,10 @@ div(ng-include='"components/navbar/navbar.html"')
 		canvas(id="bar", class="chart chart-bar", data="data", labels="labels", series="series")
 		
 	.container.item-container
-		.row.itemlist
-			|{{message}}
+		.row.championlist
+			.list-champions(ng-repeat="champion in champions|orderBy: 'name'")
+				a(ng-href="#")
+					img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/{{champion.id}}.png ", id="champion-{{champion.id}}")
+					.champion-name
+						{{champion.name}}
 		

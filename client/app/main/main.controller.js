@@ -28,6 +28,8 @@ angular.module('riotApiChallenge2App')
                 var statsOld = data['5.11'],
                     statsNew = data['5.14'];
                 championIds.length = 0;
+                totalOld.length = 0;
+                totalNew.length = 0;
 
                 for (var i in statsOld) {
                     if (i !== "total") {
