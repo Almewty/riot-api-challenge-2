@@ -6,8 +6,8 @@ angular.module('riotApiChallenge2App', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'chart.js'
-
+  'chart.js',
+	'underscore'
 ])
 	.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 		$urlRouterProvider.otherwise('/');
