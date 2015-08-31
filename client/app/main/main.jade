@@ -9,5 +9,8 @@ div(ng-include='"components/navbar/navbar.html"')
 		.row.itemlist
 			.list-items(ng-repeat="item in items|orderBy: 'name'")
 				a(ng-href="#", ng-click="changeData(item.id);")
-					img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.id}}.png", tooltip="{{item.name}}", id="item-{{item.id}}")
+					img(ng-src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/{{item.id}}.png", id="item-{{item.id}}")
+					
+div(style="position: relative;")
+	p(style="position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 12px;") APItems isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
 		
